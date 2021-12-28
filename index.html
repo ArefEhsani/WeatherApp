@@ -39,7 +39,7 @@
                 <!-- status image -->
                 <div class="status-image"><img src="img/Sunny Cloudy.png" alt="وضعیت هوا" width="150px"></div>
                 <!-- status date -->
-                <div class="date"><span>یکشنبه</span>،&nbsp;<span>21</span>&nbsp;<span>آذر</span></div>
+                <div class="date" id="DateShower1"><span>یکشنبه</span>،&nbsp;<span>21</span>&nbsp;<span>آذر</span></div>
                 <!-- status temperature -->
                 <div class="temperature"><span>29</span>°</div>
                 <!-- status name -->
@@ -126,8 +126,9 @@
             <div class="header">
                 <!-- time and date -->
                 <div class="header-time-date">
-                    <div class="header-time"><span>08:42</span></div>
-                    <div class="date"><span>یکشنبه</span>،&nbsp;<span>21</span>&nbsp;<span>آذر</span></div>
+                    <div class="header-time" id="TimeShower"><span>08:42</span></div>
+                    <div class="date" id="DateShower"><span>یکشنبه</span>،&nbsp;<span>21</span>&nbsp;<span>آذر</span>
+                    </div>
                 </div>
                 <!-- dark node -->
                 <div class="header-dark-mode">
@@ -255,7 +256,7 @@
                         <div>
                             <!-- mode weather -->
                             <div class="q-m-mode">
-                                <labe>عالی</label>
+                                <label>عالی</label>
                             </div>
                             <!-- weather description -->
                             <div class="description"><label>یه روز افتابی و عالی</label>
@@ -302,9 +303,9 @@
                     <div class="i-y-top"><label>سال : <span>سگ</span><span><i class="fas fa-dog"></i></span></label>
                     </div>
                     <!-- year day -->
-                    <div class="i-y-main"><label>روز های گذشته از سال : <span>100</span></label></div>
+                    <div class="i-y-main"><label>روز های گذشته از سال : <span id="passed-days">100</span></label></div>
                     <!-- year day -->
-                    <div class="i-y-foother"><label>روز های مانده از سال : <span>100</span></label></div>
+                    <div class="i-y-foother"><label>روز های مانده از سال : <span id="left-days">100</span></label></div>
                 </div>
                 <!-- Sunrise and sunset -->
                 <div class="Sunrise-sunset">
@@ -424,39 +425,15 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
-
-
-
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <div class="Body">
         <div class="part-2">
-
-
         </div>
     </div>
+
+    <script src="script.js"></script>
 
 </body>
 
