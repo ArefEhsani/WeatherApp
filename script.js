@@ -1,25 +1,52 @@
 fetch('https://api.keybit.ir/time/').then(response => {
     return response.json()
 }).then(data => {
-    var unix_time = data.unix.en
-    var season_name = data.season.name
-    var season_number = data.season.number.en
-    var time = data.time24.full.en
-    var date_jalali = data.date.full.official.usual.fa
-    var month_name = data.date.month.name
-    var day_name = data.date.weekday.name
-    var day_of_month = data.date.day.number.fa
-    var year_number = data.date.year.number.fa
-    var date_gergorian = data.date.other.gregorian.usual.en
-    var year_animal = data.date.year.animal
-    var gone_days = data.date.year.agone.days.en
-    var left_days = data.date.year.left.days.en
+    let unix_time = data.unix.en
+    let season_name = data.season.name
+    let season_number = data.season.number.en
+    let time = data.time24.full.en
+    let date_jalali = data.date.full.official.usual.fa
+    let month_name = data.date.month.name
+    let day_name = data.date.weekday.name
+    let day_of_month = data.date.day.number.fa
+    let year_number = data.date.year.number.fa
+    let date_gergorian = data.date.other.gregorian.usual.en
+    let year_animal = data.date.year.animal
+    let gone_days = data.date.year.agone.days.en
+    let left_days = data.date.year.left.days.en
 
     document.getElementById('DateShower').innerHTML = `${day_name}، ${day_of_month} ${month_name} ${year_number}`
     document.getElementById('DateShower1').innerHTML = `${day_name}، ${day_of_month} ${month_name}`
     document.getElementById('passed-days').innerHTML = `${gone_days}`
     document.getElementById('left-days').innerHTML = `${left_days}`
     document.getElementById('year-animal').innerHTML = `${year_animal}`
+    let year_animal_img = document.getElementById('year-animal-img')
+
+    if (year_animal == "موش") {
+        year_animal_img.src = "img/rat.png"
+    } else if (year_animal == "گاو") {
+        year_animal_img.src = "img/cow.png"
+    } else if (year_animal == "ببر") {
+        year_animal_img.src = "img/tiger.png"
+    } else if (year_animal == "گربه") {
+        year_animal_img.src = "img/cat.png"
+    } else if (year_animal == "اژدها") {
+        year_animal_img.src = "img/dragon.png"
+    } else if (year_animal == "مار") {
+        year_animal_img.src = "img/snake.png"
+    } else if (year_animal == "اسب") {
+        year_animal_img.src = "img/horse.png"
+    } else if (year_animal == "بز") {
+        year_animal_img.src = "img/goat.png"
+    } else if (year_animal == "میمون") {
+        year_animal_img.src = "img/monkey.png"
+    } else if (year_animal == "خروس") {
+        year_animal_img.src = "img/rooster.png"
+    } else if (year_animal == "سگ") {
+        year_animal_img.src = "img/dog.png"
+    } else if (year_animal == "خوک") {
+        year_animal_img == "img/pig.png"
+    }
 })
 
 CITY_NAME = "Tehran"
@@ -44,11 +71,17 @@ fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${CITY_NAME}
 
     document.getElementById("current-temp").innerHTML = current_temp
     document.getElementById("current-wind").innerHTML = current_wind
-    document.getElementById("current-weather-icon").src = current_icon
     document.getElementById("current-humidity").innerHTML = current_humidity
-    console.log(GetNameOfDay(TodayDate), TodayTemp)
-    console.log(GetNameOfDay(TomorrowDate), TomorrowTemp)
-    console.log(GetNameOfDay(TomorrowAfterThatDate), TomorrowAfterThatTemp)
+    document.getElementById("current-weather-icon").src = current_icon
+    document.getElementById("today-name").innerHTML = GetNameOfDay(TodayDate)
+    document.getElementById("tommorrow-name").innerHTML = GetNameOfDay(TomorrowDate)
+    document.getElementById("tommorrow-after-that-name").innerHTML = GetNameOfDay(TomorrowAfterThatDate)
+    document.getElementById("today-temp").innerHTML = TodayTemp
+    document.getElementById("tommorrow-temp").innerHTML = TomorrowTemp
+    document.getElementById("tommorrow-after-that-temp").innerHTML = TomorrowAfterThatTemp
+    document.getElementById("today-icon").src = TodayIcon
+    document.getElementById("tommorrow-icon").src = TomorrowIcon
+    document.getElementById("tommorrow-after-that-icon").src = TomorrowAfterThatIcon
 
 })
 
