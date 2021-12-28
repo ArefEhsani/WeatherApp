@@ -19,19 +19,32 @@ fetch('https://api.keybit.ir/time/').then(response => {
     document.getElementById('DateShower1').innerHTML = `${day_name}، ${day_of_month} ${month_name}`
     document.getElementById('passed-days').innerHTML = `${gone_days}`
     document.getElementById('left-days').innerHTML = `${left_days}`
+    document.getElementById('year-animal').innerHTML = `${year_animal}`
 })
 
-fetch('https://api.weatherapi.com/v1/forecast.json?key=91aeb191a9334544a9183731212812&q=Tehran&days=7&aqi=no&alerts=no').then(response => {
+CITY_NAME = "Tehran"
+API_KEY = "91aeb191a9334544a9183731212812"
+
+fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${CITY_NAME}&days=7&aqi=no&alerts=no`).then(response => {
     return response.json()
 }).then(data => {
     let current_temp = data.current.temp_c
     let current_icon = data.current.condition.icon
     let current_humidity = data.current.humidity
     let current_wind = data.current.wind_kph
+    let TodayDate = data.forecast.forecastday[0].date
+    let TodayTemp = data.forecast.forecastday[0].day.avgtemp_c
+    let TodayIcon = data.forecast.forecastday[0].day.condition.icon
+    let TomorrowDate = data.forecast.forecastday[1].date
+    let TomorrowTemp = data.forecast.forecastday[1].day.avgtemp_c
+    let TomorrowIcon = data.forecast.forecastday[1].day.condition.icon
+    let TomorrowAfterThatDate = data.forecast.forecastday[2].date
+    let TomorrowAfterThatTemp = data.forecast.forecastday[2].day.avgtemp_c
+    let TomorrowAfterThatIcon = data.forecast.forecastday[2].day.condition.icon
+    console.log(GetNameOfDay(TodayDate), TodayTemp)
+    console.log(GetNameOfDay(TomorrowDate), TomorrowTemp)
+    console.log(GetNameOfDay(TomorrowAfterThatDate), TomorrowAfterThatTemp)
 
-    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    var d = new Date(dateString);
-    var dayName = days[d.getDay()];
 })
 
 
@@ -45,3 +58,11 @@ function ShowTime() {
     document.getElementById("TimeShower").innerHTML = time
 }
 var myTimer = setInterval(ShowTime, 1000)
+
+
+function GetNameOfDay(strDate) {
+    var days = ['یکشنبه', 'دوشنبه', 'سه شنبه', 'چهارشنبه', 'پنجشنبه', 'جمعه', 'شنبه'];
+    var d = new Date(strDate);
+    var dayName = days[d.getDay()];
+    return dayName
+}
