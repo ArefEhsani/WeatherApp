@@ -25,7 +25,7 @@ fetch('https://api.keybit.ir/time/').then(response => {
     document.getElementById('gergorian-date-mini').innerHTML = data.date.other.gregorian.usual.en
 
 
-    
+
     let year_animal_img = document.getElementById('year-animal-img')
     if (year_animal == "موش") {
         year_animal_img.src = "img/rat.png"
@@ -94,6 +94,7 @@ fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${CITY_NAME}
 function LoadDef() {
     ShowTime()
 }
+document.getElementsByTagName("body")[0].style.display = "none"
 
 function ShowTime() {
     var today = new Date();
