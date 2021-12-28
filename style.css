@@ -187,8 +187,7 @@ body {
 
 .buttom{
     display: grid;
-
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     /* flex-direction: row;
     justify-content: space-evenly;
     margin: 10px auto; */
@@ -236,7 +235,7 @@ body {
     color: black;
     padding: 10px;
 }
-.gray .select select{
+.gray{
     color: gray;
 }
 
