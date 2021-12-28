@@ -94,7 +94,6 @@ fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${CITY_NAME}
 function LoadDef() {
     ShowTime()
 }
-document.getElementsByTagName("body")[0].style.display = "none"
 
 function ShowTime() {
     var today = new Date();
