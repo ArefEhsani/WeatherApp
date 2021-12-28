@@ -159,16 +159,17 @@ body {
 
 
 .Week {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     margin: auto;
     width: 95%;
+    margin-bottom: 200px;
 }
 .day {
     background-color: rgb(247, 247, 247);
     color: black;
-    width: 90px;
-    height: 130px;
+    width: 90%;
+    height: 200%;
     margin: 10px auto;
     border-radius: 20px;
     box-shadow: 1px 1px 2px rgb(80, 80, 80),-1px -1px 2px white;
@@ -270,7 +271,6 @@ body {
 
 
 .info-year{
-    
     box-shadow: 1px 1px 10px gray;
     border-radius: 15px;
     background-color: white;
@@ -356,11 +356,11 @@ body {
         display: none;
     }
 
-    .Week {
+    /* .Week {
         display: grid;
-        grid-template-columns: repeat(7,1fr);
+        grid-template-columns: repeat(2,1fr);
         
-    }
+    } */
     .day{
         width: 85%;
     }
@@ -369,14 +369,22 @@ body {
 
 @media only screen and (max-width:991px) {
     .Week {
-        grid-template-columns: repeat(6,1fr);
+        grid-template-columns: 1fr;
+    }
+    .main-info {
+        grid-column: 1;
+        height: 80vh;
+        border-radius: 20px;
+        margin: 20px auto;
+        box-shadow: -1px 1px 5px gray;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
     }
 }
 
 @media only screen and (max-width:768px) {
-    .Week {
-        grid-template-columns: repeat(4,1fr);
-    }
     .day{
         width: 90%;
     }
