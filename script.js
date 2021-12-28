@@ -41,6 +41,11 @@ fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${CITY_NAME}
     let TomorrowAfterThatDate = data.forecast.forecastday[2].date
     let TomorrowAfterThatTemp = data.forecast.forecastday[2].day.avgtemp_c
     let TomorrowAfterThatIcon = data.forecast.forecastday[2].day.condition.icon
+
+    document.getElementById("current-temp").innerHTML = current_temp
+    document.getElementById("current-wind").innerHTML = current_wind
+    document.getElementById("current-weather-icon").src = current_icon
+    document.getElementById("current-humidity").innerHTML = current_humidity
     console.log(GetNameOfDay(TodayDate), TodayTemp)
     console.log(GetNameOfDay(TomorrowDate), TomorrowTemp)
     console.log(GetNameOfDay(TomorrowAfterThatDate), TomorrowAfterThatTemp)
