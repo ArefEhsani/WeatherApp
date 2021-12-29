@@ -22,6 +22,7 @@ body {
     background: linear-gradient(45deg, rgb(75, 154, 250)20%, rgb(156, 187, 236) 99%);
     width: 95%;
     height: 70vh;
+    min-height: 420px;
     border-radius: 20px;
     margin: 20px auto;
     box-shadow: -1px -1px 3px white,1px 1px 3px black;
@@ -29,15 +30,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-}
-.m-i-top .select select,
-.citys .select select {
-    font-family: "IranSansDN";
-    background: transparent;
-    border: none;
-    border-radius: 20px;
-    color: white;
-
 }
 .temperature {
     font-size: 3rem;
@@ -56,7 +48,7 @@ body {
 
 .Event{
     border-radius: 15px;
-    width: 93%;
+    width: 80%;
     margin: auto;
     text-align: center;
 }
@@ -130,7 +122,7 @@ body {
     background-color: rgb(247, 247, 247);
     color: black;
     width: 90%;
-    height: 180%;
+    height: 150%;
     margin: 10px auto;
     border-radius: 20px;
     box-shadow: 1px 1px 3px black,-1px -1px 3px white;
@@ -261,6 +253,9 @@ body {
     }
     .info-year img{
         width: 150px;
+    }
+    .header,.alert{
+        display: none;
     }
    
 }
