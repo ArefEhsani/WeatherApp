@@ -17,8 +17,20 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr;
     color: white;
+    margin: 40px;
 }
 
+.container>div:first-child {
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.container>div:nth-child(2) {
+    background-color: rgb(217, 221, 233);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
 
 
 
@@ -73,12 +85,11 @@ body {
 
 
 .header {
-    height: 140px;
+    height: 100px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     padding: 30px;
-
 }
 
 .header-time-date {
@@ -137,7 +148,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: auto;
-    width: 80%;
+    width: 60%;
     margin-bottom: 200px;
 }
 
@@ -269,8 +280,6 @@ body {
 }
 
 
-
-
 @media only screen and (max-width:1080px) {
     body {
         font-size: 3rem;
@@ -286,6 +295,10 @@ body {
 
     .Wind-humidity {
         width: 70%;
+    }
+
+    .Week{
+        width: 90%;
     }
 
     .day {
@@ -306,8 +319,27 @@ body {
         display: none;
     }
 
-}
+    .header-time-date {
+        font-size: 6rem;
+    }
 
+    .container>div:first-child {
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .container>div:nth-child(2) {
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+
+
+}
 
 @media only screen and (max-width:991px) {
 
@@ -322,7 +354,6 @@ body {
 
 }
 
-
 @media only screen and (max-width:768px) {
 
     /* *{
@@ -335,38 +366,4 @@ body {
     .info-Sunrise-sunset {
         flex-direction: column;
     }
-}
-
-
-
-
-
-
-
-/* .Body{
-    margin-top: 300px;
-    display: flex;
-    flex-direction: row;
-    padding: 4%;
-}
-
-
-.part-1{
-    background-color: white;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.part-2{
-    background-color: rgb(217, 221, 233);
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-
-.Header{
-    margin-top: 30px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
 }
