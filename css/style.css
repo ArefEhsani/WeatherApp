@@ -1,6 +1,6 @@
 @font-face {
     font-family: "IranSansDN";
-    src: url("font/IranSansDN.ttf");
+    src: url("../font/IranSansDN.ttf");
 }
 
 * {
@@ -60,8 +60,10 @@ body {
 
 .Event {
     border-radius: 15px;
-    width: 80%;
+    width: 90%;
+    min-height: 200px;
     margin: auto;
+    padding-top: 4px;
     text-align: center;
 }
 
@@ -123,13 +125,6 @@ body {
 
 
 
-
-.alert {
-    color: rgb(0, 88, 252);
-    font-size: 20px;
-    text-align: center;
-    text-shadow: 1px 1px 3px gray;
-}
 
 
 .Week {
@@ -296,6 +291,8 @@ body {
 
     .Week {
         width: 90%;
+        margin-top: 80px;
+        margin-bottom: 180px;
     }
 
     .day {
@@ -309,11 +306,6 @@ body {
 
     .info-year img {
         width: 150px;
-    }
-
-    .header,
-    .alert {
-        display: none;
     }
 
     .header-time-date {
@@ -338,6 +330,15 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .gride>div {
+        margin-bottom: 10px;
+    }
+
+    .Sunrise-sunset,
+    .info-year {
+        margin: 0px;
+    }
+
 
 }
 
@@ -345,6 +346,7 @@ body {
 
     .Week {
         grid-template-columns: 1fr;
+        margin-bottom: 10px;
     }
 
     .day {
@@ -352,18 +354,9 @@ body {
         flex-direction: row;
     }
 
-}
-
-@media only screen and (max-width:768px) {
-
-    /* *{
-        font-size:xxx-large;
-    } */
-    .buttom {
-        grid-template-columns: 1fr;
-    }
-
     .info-Sunrise-sunset {
         flex-direction: column;
+        margin: 40px;
     }
+
 }
