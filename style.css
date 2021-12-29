@@ -114,9 +114,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: 1s;
 }
 
-
+.header-dark-mode div:hover {
+    transform: rotate(360deg);
+}
 
 
 
@@ -169,19 +172,20 @@ body {
 
 .buttom>div {
     width: 90%;
-    margin: 3px auto;
+    margin: 5px auto;
 }
 
 
 
 
 .Different-dates {
+    width: 10%;
     color: black;
     display: flex;
     flex-direction: column;
     border-radius: 15px;
     background-color: white;
-    padding: 7px;
+    padding: 7px 0px;
     text-align: center;
     justify-content: center;
     box-shadow: 1px 1px 3px black, -1px -1px 3px white;
@@ -200,7 +204,7 @@ body {
     color: black;
     text-align: center;
     padding: 7px;
-    margin: 5px;
+    margin-left: 5px;
 }
 
 
@@ -212,7 +216,7 @@ body {
     background-color: white;
     color: black;
     padding: 7px;
-    margin: 5px;
+    margin-right: 5px;
 }
 
 .gray {
