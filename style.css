@@ -20,18 +20,6 @@ body {
     margin: 40px;
 }
 
-.container>div:first-child {
-    background-color: white;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.container>div:nth-child(2) {
-    background-color: rgb(217, 221, 233);
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-
 
 
 .main-info {
@@ -128,10 +116,7 @@ body {
     justify-content: center;
 }
 
-.header-dark-mode div:first-child {
-    background-color: rgb(68, 134, 255);
-    color: white;
-}
+
 
 
 
@@ -149,7 +134,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     margin: auto;
     width: 60%;
-    margin-bottom: 200px;
+    margin-bottom: 90px;
 }
 
 .day {
@@ -184,7 +169,7 @@ body {
 
 .buttom>div {
     width: 90%;
-    margin: 10px auto;
+    margin: 3px auto;
 }
 
 
@@ -196,8 +181,7 @@ body {
     flex-direction: column;
     border-radius: 15px;
     background-color: white;
-    padding: 10px;
-    box-shadow: -1px -1px 6px gray;
+    padding: 7px;
     text-align: center;
     justify-content: center;
     box-shadow: 1px 1px 3px black, -1px -1px 3px white;
@@ -215,7 +199,8 @@ body {
     background-color: white;
     color: black;
     text-align: center;
-    padding: 10px;
+    padding: 7px;
+    margin: 5px;
 }
 
 
@@ -226,7 +211,8 @@ body {
     border-radius: 15px;
     background-color: white;
     color: black;
-    padding: 10px;
+    padding: 7px;
+    margin: 5px;
 }
 
 .gray {
@@ -280,6 +266,13 @@ body {
 }
 
 
+
+.gride {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
 @media only screen and (max-width:1080px) {
     body {
         font-size: 3rem;
@@ -297,7 +290,7 @@ body {
         width: 70%;
     }
 
-    .Week{
+    .Week {
         width: 90%;
     }
 
@@ -337,6 +330,9 @@ body {
         border-bottom-left-radius: 20px;
     }
 
+    .gride {
+        grid-template-columns: 1fr;
+    }
 
 
 }

@@ -1,0 +1,50 @@
+.container>div:first-child {
+    background-color: rgba(27, 27, 27, 0.596);
+}
+
+.container>div:nth-child(2) {
+    background-color: rgba(39, 39, 43, 0.596);
+}
+
+.container>div>div>div {
+    background-color: rgba(27, 27, 27, 0);
+    color: aqua;
+}
+
+.gride>div {
+    background-color: rgba(27, 27, 27, 0);
+    color: aqua;
+}
+
+.main-info {
+    background: linear-gradient(45deg, rgb(36, 36, 39)20%, rgb(108, 116, 128) 99%);
+}
+
+.day:first-child {
+    background: linear-gradient(45deg, rgb(36, 36, 39)20%, rgb(108, 116, 128) 99%);
+}
+
+.header-dark-mode div:last-child {
+    background-color: rgb(255, 166, 0);
+    color: white;
+}
+
+.city-Sunrise-sunset {
+    background: none;
+}
+
+.gray,
+.c-time,
+.Sunrise-sunset-box .name {
+    color: aqua;
+}
+
+.Event {
+    background: none;
+    border: 1px solid rgb(0, 162, 255);
+    box-shadow: 0px 0px 6px aqua;
+}
+
+.header .date {
+    color: white;
+}
