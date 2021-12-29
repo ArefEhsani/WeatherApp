@@ -2,19 +2,24 @@
     font-family: "IranSansDN";
     src: url("font/IranSansDN.ttf");
 }
+
 * {
     font-family: "IranSansDN";
 }
+
 body {
     background-color: rgb(128, 167, 241);
     direction: rtl;
-    font-size: 25px;
+    font-size: 17px;
 }
+
 .container {
     display: grid;
     grid-template-columns: 1fr 2fr;
     color: white;
 }
+
+
 
 
 .main-info {
@@ -25,20 +30,25 @@ body {
     min-height: 420px;
     border-radius: 20px;
     margin: 20px auto;
-    box-shadow: -1px -1px 3px white,1px 1px 3px black;
+    box-shadow: -1px -1px 3px white, 1px 1px 3px black;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
+
 .temperature {
     font-size: 3rem;
 }
+
 .Wind-humidity {
     width: 70%;
     display: flex;
     flex-direction: column;
 }
+
+
+
 .wind,
 .humidity {
     display: flex;
@@ -46,15 +56,20 @@ body {
 }
 
 
-.Event{
+
+
+.Event {
     border-radius: 15px;
     width: 80%;
     margin: auto;
     text-align: center;
 }
+
 .orange {
     background: linear-gradient(190deg, #FFB319 20%, #FFE194 99%);
 }
+
+
 
 
 .header {
@@ -65,17 +80,20 @@ body {
     padding: 30px;
 
 }
+
 .header-time-date {
     color: rgb(68, 134, 255);
     font-size: 3rem;
     text-shadow: 1px 1px 3px black;
 }
+
 .header .date {
     font-size: 1rem;
     color: black;
     text-align: left;
     text-shadow: none;
 }
+
 .header-dark-mode {
     display: flex;
     flex-direction: row-reverse;
@@ -86,6 +104,7 @@ body {
     background-color: rgb(235, 235, 235);
     box-shadow: 1px 1px 1px gray, -1px -1px 1px white;
 }
+
 .header-dark-mode div {
     color: gray;
     border-radius: 50%;
@@ -97,10 +116,13 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
 .header-dark-mode div:first-child {
     background-color: rgb(68, 134, 255);
     color: white;
 }
+
+
 
 
 .alert {
@@ -113,11 +135,12 @@ body {
 
 .Week {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin: auto;
     width: 80%;
     margin-bottom: 200px;
 }
+
 .day {
     background-color: rgb(247, 247, 247);
     color: black;
@@ -125,7 +148,7 @@ body {
     height: 150%;
     margin: 10px auto;
     border-radius: 20px;
-    box-shadow: 1px 1px 3px black,-1px -1px 3px white;
+    box-shadow: 1px 1px 3px black, -1px -1px 3px white;
     border: none;
     display: flex;
     flex-direction: column;
@@ -133,6 +156,7 @@ body {
     justify-items: center;
     justify-content: space-evenly;
 }
+
 .day:first-child {
     background: linear-gradient(45deg, rgb(75, 154, 250)20%, rgb(156, 187, 236) 99%);
     color: white;
@@ -140,17 +164,22 @@ body {
 }
 
 
-.buttom{
+
+
+.buttom {
     display: grid;
     grid-template-columns: 1fr;
 }
-.buttom>div{
+
+.buttom>div {
     width: 90%;
     margin: 10px auto;
 }
-    
 
-.Different-dates{
+
+
+
+.Different-dates {
     color: black;
     display: flex;
     flex-direction: column;
@@ -160,16 +189,17 @@ body {
     box-shadow: -1px -1px 6px gray;
     text-align: center;
     justify-content: center;
-    box-shadow: 1px 1px 3px black,-1px -1px 3px white;
+    box-shadow: 1px 1px 3px black, -1px -1px 3px white;
 }
-.Different-dates>div{
+
+.Different-dates>div {
     display: flex;
     justify-content: space-around;
 }
 
 
-.info-year{
-    box-shadow: 1px 1px 3px black,-1px -1px 3px white;
+.info-year {
+    box-shadow: 1px 1px 3px black, -1px -1px 3px white;
     border-radius: 15px;
     background-color: white;
     color: black;
@@ -179,17 +209,20 @@ body {
 
 
 
-.Sunrise-sunset{
-    box-shadow: 1px 1px 3px black,-1px -1px 3px white;
+
+.Sunrise-sunset {
+    box-shadow: 1px 1px 3px black, -1px -1px 3px white;
     border-radius: 15px;
     background-color: white;
     color: black;
     padding: 10px;
 }
-.gray{
+
+.gray {
     color: gray;
 }
-.city-Sunrise-sunset{
+
+.city-Sunrise-sunset {
     background-color: rgba(255, 224, 230, 0.808);
     display: flex;
     flex-direction: column;
@@ -197,32 +230,39 @@ body {
     border-radius: 20px;
     align-items: center;
 }
-.sunrise-top{
+
+.sunrise-top {
     text-align: center;
     margin-top: 20px;
 }
-.city-Sunrise-sunset .Sunrise-sunset-box{
+
+.city-Sunrise-sunset .Sunrise-sunset-box {
     display: flex;
     margin: 0px 20px 10px 20px;
 }
-.icon-Sunrise-sunset{
+
+.icon-Sunrise-sunset {
     color: rgb(255, 208, 0);
     font-size: 4rem;
     margin-left: 10px;
 }
-.Sunrise-sunset-box .name{
+
+.Sunrise-sunset-box .name {
     color: gray;
 }
-.c-time{
+
+.c-time {
     color: blue;
 }
-.info-Sunrise-sunset{
+
+.info-Sunrise-sunset {
     display: flex;
 }
 
 
 
-.city-iran{
+
+.city-iran {
     display: flex;
     justify-content: space-between;
     margin: 0px 30px;
@@ -232,54 +272,67 @@ body {
 
 
 @media only screen and (max-width:1080px) {
-    body{
+    body {
         font-size: 3rem;
     }
-    .header-dark-mode div{
+
+    .header-dark-mode div {
         font-size: 2.2rem;
     }
+
     .container {
         grid-template-columns: 1fr;
     }
+
     .Wind-humidity {
         width: 70%;
     }
-    .day{
+
+    .day {
         width: 95%;
     }
+
     .main-info {
         height: 700px;
         border-radius: 20px;
     }
-    .info-year img{
+
+    .info-year img {
         width: 150px;
     }
-    .header,.alert{
+
+    .header,
+    .alert {
         display: none;
     }
-   
+
 }
 
+
 @media only screen and (max-width:991px) {
-    
+
     .Week {
         grid-template-columns: 1fr;
     }
-    .day{
+
+    .day {
         height: 200px;
         flex-direction: row;
     }
-    
+
 }
 
+
 @media only screen and (max-width:768px) {
+
     /* *{
         font-size:xxx-large;
     } */
-    .buttom{
+    .buttom {
         grid-template-columns: 1fr;
     }
-    .info-Sunrise-sunset{
+
+    .info-Sunrise-sunset {
         flex-direction: column;
     }
 }
@@ -317,8 +370,3 @@ body {
     align-items: center;
     justify-content: space-evenly;
 }
-
-
-
-
-
