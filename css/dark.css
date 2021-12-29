@@ -1,9 +1,13 @@
 .container>div:first-child {
     background-color: rgba(27, 27, 27, 0.596);
+    border-bottom-right-radius: 20px;
+    border-top-right-radius:20px;
 }
 
 .container>div:nth-child(2) {
     background-color: rgba(39, 39, 43, 0.596);
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 .container>div>div>div {
@@ -47,4 +51,14 @@
 
 .header .date {
     color: white;
+}
+
+@media only screen and (max-width:1080px){
+    .container>div:first-child {
+        border-bottom-right-radius: 0px;
+    }
+    
+    .container>div:nth-child(2) {
+        border-top-left-radius: 0px;
+    }
 }
