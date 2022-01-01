@@ -98,6 +98,11 @@ function ShowTime() {
 var myTimer = setInterval(ShowTime, 1000)
 
 
+function SwitchTheme() {
+    document.getElementById("theme-link").href = "dark.css";
+}
+
+
 function GetNameOfDay(strDate) {
     var days = ['یکشنبه', 'دوشنبه', 'سه شنبه', 'چهارشنبه', 'پنجشنبه', 'جمعه', 'شنبه'];
     var d = new Date(strDate);
