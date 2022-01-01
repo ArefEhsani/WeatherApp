@@ -27,6 +27,13 @@
     box-shadow: 1px 1px 3px black, -1px -1px 3px white;
 }
 
+.orange {
+    background: linear-gradient(190deg, #ffb2199a 20%, #ffe19459 99%);
+}
+
+.day,.header-dark-mode,.Different-dates,.info-year,.Sunrise-sunset {
+    background-color: rgba(253, 253, 253, 0.493);
+}
 
 @media only screen and (max-width:1080px){
     .container>div:first-child {

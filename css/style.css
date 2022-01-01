@@ -9,6 +9,7 @@
 
 body {
     background-color: rgb(128, 167, 241);
+    background: url("https://www.momtaznews.com/wp-content/uploads/2012/10/3415943bc53415455a8f8735aeeadc6d.jpg") no-repeat center/cover;
     direction: rtl;
     font-size: 17px;
 }
@@ -66,11 +67,6 @@ body {
     padding-top: 4px;
     text-align: center;
 }
-
-.orange {
-    background: linear-gradient(190deg, #FFB319 20%, #FFE194 99%);
-}
-
 
 
 
