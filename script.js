@@ -98,8 +98,11 @@ function ShowTime() {
 var myTimer = setInterval(ShowTime, 1000)
 
 
-function SwitchTheme() {
-    document.getElementById("theme-link").href = "dark.css";
+function SwitchThemeDark() {
+    document.getElementById("theme-link").href = "css/dark.css";
+}
+function SwitchThemeLight() {
+    document.getElementById("theme-link").href = "css/light.css";
 }
 
 
