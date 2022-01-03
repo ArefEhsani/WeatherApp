@@ -9,7 +9,8 @@
 
 body {
     background-color: rgb(128, 167, 241);
-    background: url("https://www.momtaznews.com/wp-content/uploads/2012/10/3415943bc53415455a8f8735aeeadc6d.jpg") no-repeat center/cover;
+    background: center/cover;
+    /* background: url("https://www.momtaznews.com/wp-content/uploads/2012/10/3415943bc53415455a8f8735aeeadc6d.jpg") no-repeat center/cover; */
     direction: rtl;
     font-size: 17px;
 }

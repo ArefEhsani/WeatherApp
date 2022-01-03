@@ -1,3 +1,28 @@
+function ChangeBackground() {
+    const image_urls = [
+        "https://i.pinimg.com/originals/c5/d8/6c/c5d86cecd6f2371bbc48ead059002537.jpg",
+        "https://i.pinimg.com/originals/8c/f2/e3/8cf2e3186bbacb92681699b3fff5b29b.jpg",
+        "https://timedia.tierient.com/timg/6c770c79e2da1efa.jpg",
+        "https://youtravel.me/upload/tours/15981/media/bdd/bddb3f2210b42ecb4c3ca311c7c4bbec.jpg",
+        "https://diuim.ru/images/speasyimagegallery/albums/8/images/altai002.jpg",
+        "https://diuim.ru/images/speasyimagegallery/albums/8/images/altai002.jpg",
+        "https://i.pinimg.com/originals/ec/cf/a1/eccfa1e04a128701f26806a9f1e9591a.jpg",
+        "https://to-ru.com/wp-content/uploads/2016/02/Altai.jpg"
+    ]
+
+    random_img = Math.floor(Math.random() * image_urls.length);
+
+    console.log("Before")
+    document.body.style.backgroundImage = `url('${image_urls[random_img]}')`
+    document.body.style.backgroundRepeat = "no-repeat";
+    console.log("After")
+}
+
+function LoadDef() {
+    ShowTime()
+    ChangeBackground()
+}
+
 fetch('https://api.keybit.ir/time/').then(response => {
     return response.json()
 }).then(data => {
@@ -86,9 +111,7 @@ fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${CITY_NAME}
 })
 
 
-function LoadDef() {
-    ShowTime()
-}
+
 
 function ShowTime() {
     var today = new Date();
@@ -101,6 +124,7 @@ var myTimer = setInterval(ShowTime, 1000)
 function SwitchThemeDark() {
     document.getElementById("theme-link").href = "css/dark.css";
 }
+
 function SwitchThemeLight() {
     document.getElementById("theme-link").href = "css/light.css";
 }
