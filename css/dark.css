@@ -27,10 +27,12 @@
 .day:first-child {
     background: linear-gradient(45deg, rgb(36, 36, 39)20%, rgb(108, 116, 128) 99%);
 }
+.header-dark-mode div {
+    color: white;
+}
 
 .header-dark-mode div:last-child {
     background-color: rgb(255, 166, 0);
-    color: white;
 }
 
 .city-Sunrise-sunset {
