@@ -33,7 +33,6 @@ fetch('https://api.keybit.ir/time/').then(response => {
     let day_of_month = data.date.day.number.fa
     let year_number = data.date.year.number.fa
     let year_animal = data.date.year.animal
-    let today_event = data.date.day.events.local.text
 
     document.getElementById('DateShower').innerHTML = `${day_name}، ${day_of_month} ${month_name} ${year_number}`
     document.getElementById('DateShower1').innerHTML = `${day_name}، ${day_of_month} ${month_name}`
@@ -43,6 +42,7 @@ fetch('https://api.keybit.ir/time/').then(response => {
     document.getElementById('persian-date-mini').innerHTML = data.date.full.official.usual.fa
     document.getElementById('arabic-date-mini').innerHTML = data.date.other.ghamari.usual.fa
     document.getElementById('gergorian-date-mini').innerHTML = data.date.other.gregorian.usual.en
+    document.getElementById('event-box').innerHTML = data.date.day.events.local.text
 
     let year_animal_img = document.getElementById('year-animal-img')
 
