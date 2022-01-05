@@ -87,29 +87,36 @@ fetch('https://api.keybit.ir/time/').then(response => {
 
 })
 
-CITY_NAME = "Tehran"
-API_KEY = "91aeb191a9334544a9183731212812"
+WeatherApiSet("Tehran")
 
-fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${CITY_NAME}&days=7&aqi=no&alerts=no`).then(response => {
-    return response.json()
-}).then(data => {
-    document.getElementById("current-temp").innerHTML = data.current.temp_c
-    document.getElementById("current-wind").innerHTML = data.current.wind_kph
-    document.getElementById("current-humidity").innerHTML = data.current.humidity
-    document.getElementById("current-weather-icon").src = data.current.condition.icon
-    document.getElementById("today-name").innerHTML = GetNameOfDay(data.forecast.forecastday[0].date)
-    document.getElementById("tommorrow-name").innerHTML = GetNameOfDay(data.forecast.forecastday[1].date)
-    document.getElementById("tommorrow-after-that-name").innerHTML = GetNameOfDay(data.forecast.forecastday[2].date)
-    document.getElementById("today-temp").innerHTML = data.forecast.forecastday[0].day.avgtemp_c
-    document.getElementById("tommorrow-temp").innerHTML = data.forecast.forecastday[1].day.avgtemp_c
-    document.getElementById("tommorrow-after-that-temp").innerHTML = data.forecast.forecastday[2].day.avgtemp_c
-    document.getElementById("today-icon").src = data.forecast.forecastday[0].day.condition.icon
-    document.getElementById("tommorrow-icon").src = data.forecast.forecastday[1].day.condition.icon
-    document.getElementById("tommorrow-after-that-icon").src = data.forecast.forecastday[2].day.condition.icon
-    document.getElementById("sunrise-time").innerHTML = Convert12Hto24H(data.forecast.forecastday[0].astro.sunrise)
-    document.getElementById("sunset-time").innerHTML = Convert12Hto24H(data.forecast.forecastday[0].astro.sunset)
+document.getElementById("btn-search").onclick = function () {
+    SearchInput = document.getElementById("search-box")
+    WeatherApiSet(SearchInput.value)
+}
 
-})
+function WeatherApiSet(city) {
+    API_KEY = "91aeb191a9334544a9183731212812"
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=7&aqi=no&alerts=no`).then(response => {
+        return response.json()
+    }).then(data => {
+        document.getElementById("current-temp").innerHTML = data.current.temp_c
+        document.getElementById("current-wind").innerHTML = data.current.wind_kph
+        document.getElementById("current-humidity").innerHTML = data.current.humidity
+        document.getElementById("current-weather-icon").src = data.current.condition.icon
+        document.getElementById("today-name").innerHTML = GetNameOfDay(data.forecast.forecastday[0].date)
+        document.getElementById("tommorrow-name").innerHTML = GetNameOfDay(data.forecast.forecastday[1].date)
+        document.getElementById("tommorrow-after-that-name").innerHTML = GetNameOfDay(data.forecast.forecastday[2].date)
+        document.getElementById("today-temp").innerHTML = data.forecast.forecastday[0].day.avgtemp_c
+        document.getElementById("tommorrow-temp").innerHTML = data.forecast.forecastday[1].day.avgtemp_c
+        document.getElementById("tommorrow-after-that-temp").innerHTML = data.forecast.forecastday[2].day.avgtemp_c
+        document.getElementById("today-icon").src = data.forecast.forecastday[0].day.condition.icon
+        document.getElementById("tommorrow-icon").src = data.forecast.forecastday[1].day.condition.icon
+        document.getElementById("tommorrow-after-that-icon").src = data.forecast.forecastday[2].day.condition.icon
+        document.getElementById("sunrise-time").innerHTML = Convert12Hto24H(data.forecast.forecastday[0].astro.sunrise)
+        document.getElementById("sunset-time").innerHTML = Convert12Hto24H(data.forecast.forecastday[0].astro.sunset)
+
+    })
+}
 
 
 
