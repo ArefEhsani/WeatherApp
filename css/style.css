@@ -355,6 +355,10 @@ body {
 }
 
 @media only screen and (max-width:991px) {
+    .serching input{
+        padding: 10px;
+        font-size: .8em;
+    }
 
     .Week {
         grid-template-columns: 1fr;
