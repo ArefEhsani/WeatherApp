@@ -10,7 +10,6 @@
 body {
     background-color: rgb(128, 167, 241);
     background: center/cover;
-    /* background: url("https://www.momtaznews.com/wp-content/uploads/2012/10/3415943bc53415455a8f8735aeeadc6d.jpg") no-repeat center/cover; */
     direction: rtl;
     font-size: 17px;
 }
@@ -22,7 +21,23 @@ body {
     margin: 40px;
 }
 
+.serching {
+    width:70%;
+    margin: auto;
+    margin-top: 10px;
+}
 
+.serching input{
+    background-color: rgb(204, 204, 204);
+    border: 1px solid wheat;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+}
+
+.serching input:focus{
+    outline: 3px solid rgb(58, 137, 255);
+}
 
 .main-info {
     grid-column: 1;
@@ -100,7 +115,7 @@ body {
     height: 50px;
     padding: 5px;
     background-color: rgb(235, 235, 235);
-    box-shadow: 1px 1px 1px gray, -1px -1px 1px white;
+    box-shadow: 1px 1px 1px black, -1px -1px 1px white;
 }
 
 .header-dark-mode div {
@@ -355,5 +370,7 @@ body {
         flex-direction: column;
         margin: 40px;
     }
-
+    .header-dark-mode{
+        transform: scale(1.4);
+    }
 }
