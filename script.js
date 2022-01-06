@@ -88,6 +88,13 @@ fetch('https://api.keybit.ir/time/').then(response => {
     }
 
 })
+fetch('https://api.keybit.ir/owghat/?city=%D8%AA%D9%87%D8%B1%D8%A7%D9%86').then(response => {
+    return response.json()
+}).then(data => {
+    document.getElementById('azan-sobh').innerHTML = data.result.azan_sobh
+    document.getElementById('azan-zohr').innerHTML = data.result.azan_zohr
+    document.getElementById('azan-maghreb').innerHTML = data.result.azan_maghreb
+})
 
 WeatherApiSet("Tehran")
 
@@ -117,6 +124,8 @@ function WeatherApiSet(city) {
         document.getElementById("tommorrow-after-that-icon").src = data.forecast.forecastday[2].day.condition.icon
         document.getElementById("sunrise-time").innerHTML = Convert12Hto24H(data.forecast.forecastday[0].astro.sunrise)
         document.getElementById("sunset-time").innerHTML = Convert12Hto24H(data.forecast.forecastday[0].astro.sunset)
+        document.getElementById("sunrise-tommorrow").innerHTML = Convert12Hto24H(data.forecast.forecastday[1].astro.sunrise)
+        document.getElementById("sunset-tommorrow").innerHTML = Convert12Hto24H(data.forecast.forecastday[1].astro.sunset)
 
     })
 }
