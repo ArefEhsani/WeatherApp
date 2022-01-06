@@ -12,10 +12,8 @@ function ChangeBackground() {
 
     random_img = Math.floor(Math.random() * image_urls.length);
 
-    console.log("Before")
     document.body.style.backgroundImage = `url('${image_urls[random_img]}')`
     document.body.style.backgroundRepeat = "no-repeat";
-    console.log("After")
 }
 
 function LoadDef() {
@@ -42,7 +40,11 @@ fetch('https://api.keybit.ir/time/').then(response => {
     document.getElementById('persian-date-mini').innerHTML = data.date.full.official.usual.fa
     document.getElementById('arabic-date-mini').innerHTML = data.date.other.ghamari.usual.fa
     document.getElementById('gergorian-date-mini').innerHTML = data.date.other.gregorian.usual.en
-    document.getElementById('event-box').innerHTML = data.date.day.events.local.text
+    try {
+        document.getElementById('event-box').innerHTML = data.date.day.events.local.text
+    } catch (error) {
+        document.getElementById('event-box').innerHTML = "رویدادی برای امروز وجود ندارد"
+    }
 
     let year_animal_img = document.getElementById('year-animal-img')
 
@@ -89,7 +91,7 @@ fetch('https://api.keybit.ir/time/').then(response => {
 
 WeatherApiSet("Tehran")
 
-document.getElementById("btn-search").onclick = function () {
+document.getElementById("btn-search").onclick = function() {
     SearchInput = document.getElementById("search-box")
     WeatherApiSet(SearchInput.value)
 }
@@ -99,6 +101,7 @@ function WeatherApiSet(city) {
     fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=7&aqi=no&alerts=no`).then(response => {
         return response.json()
     }).then(data => {
+        document.getElementById("weather-city-name").innerHTML = data.location.name
         document.getElementById("current-temp").innerHTML = data.current.temp_c
         document.getElementById("current-wind").innerHTML = data.current.wind_kph
         document.getElementById("current-humidity").innerHTML = data.current.humidity
