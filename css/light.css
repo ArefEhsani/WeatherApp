@@ -28,7 +28,8 @@
 }
 
 .orange {
-    background: linear-gradient(190deg, #ffb2199a 20%, #ffe19459 99%);
+    background: rgba(255, 102, 0, 0.596);
+    color: rgb(255, 255, 254);
 }
 
 .day,.header-dark-mode,.Different-dates,.info-year,.Sunrise-sunset {
