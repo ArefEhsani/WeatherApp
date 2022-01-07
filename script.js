@@ -103,6 +103,13 @@ document.getElementById("btn-search").onclick = function() {
     WeatherApiSet(SearchInput.value)
 }
 
+document.getElementById("search-box").addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("btn-search").click()
+    }
+});
+
 function WeatherApiSet(city) {
     API_KEY = "91aeb191a9334544a9183731212812"
     fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=7&aqi=no&alerts=no`).then(response => {
