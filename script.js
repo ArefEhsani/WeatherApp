@@ -55,7 +55,7 @@ fetch('https://api.keybit.ir/time/').then(response => {
         case 'گاو':
             year_animal_img.src = "img/cow.png";
             break;
-        case 'ببر':
+        case 'پلنگ':
             year_animal_img.src = "img/tiger.png";
             break;
         case 'گربه':
@@ -88,6 +88,8 @@ fetch('https://api.keybit.ir/time/').then(response => {
     }
 
 })
+
+
 fetch('https://api.keybit.ir/owghat/?city=%D8%AA%D9%87%D8%B1%D8%A7%D9%86').then(response => {
     return response.json()
 }).then(data => {
